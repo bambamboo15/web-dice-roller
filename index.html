@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Dice Roller</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,
+		100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body onload="roll()">
+		<div class="header">
+			<h1>Web Dice Roller</h1>
+			<p>
+				This website lets you roll five 6-sided dice,
+				intended for the game of Yahtzee.
+				To roll them, click on the roll button below!
+			</p>
+		</div>
+		<div class="body">
+			<button id="roll-btn" autofocus="true" tabindex="1" onclick="roll()">
+				<b>Roll</b>
+			</button>
+			<div class="dice">
+				<div class="field-wrapper">
+					<span class="field"></span>
+				</div>
+				<div class="field-wrapper">
+					<span class="field"></span>
+				</div>
+				<div class="field-wrapper">
+					<span class="field"></span>
+				</div>
+				<div class="field-wrapper">
+					<span class="field"></span>
+				</div>
+				<div class="field-wrapper">
+					<span class="field"></span>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

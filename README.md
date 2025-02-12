@@ -1,1 +1,3 @@
 # Web Dice Roller
+
+My name is Benyamin Bamburac, and my Lewis University email address is [benyaminfbamburac@lewisu.edu](mailto:benyaminfbamburac@lewisu.edu). This is a dark-themed website, and I credit Github as they inspired this website design. To view this website, go to the `index.html` page, or alternatively, click [here](https://ambitious-flower-067bf5910.4.azurestaticapps.net) for the Azure hosted website. The required files are `index.html` and `style.css`.

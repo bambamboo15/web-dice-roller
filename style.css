@@ -1,0 +1,98 @@
+/* Custom colors used across the whole application */
+:root {
+	--background-color: #F0EDCC;
+	--background-transparent-color: #F0EDCC55;
+	--theme-color: #02343F;
+	--theme-transparent-color: #02343F22;
+}
+
+body, html {
+	font-family: "Roboto";
+}
+
+body {
+	background-color: var(--background-color);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+	margin-bottom: 0;
+	color: var(--theme-color);
+}
+
+.header > h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 48px;
+	text-shadow: 0 0 5px var(--theme-transparent-color);
+}
+
+.header > p {
+	text-align: center;
+	width: 600px;
+	font-size: 24px;
+	padding-top: 5px;
+	text-shadow: 0 0 2px var(--theme-transparent-color);
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dice {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 5px;
+}
+
+.field-wrapper {
+	border: 4px solid var(--theme-color);
+	border-radius: 15px;
+	box-shadow: 0 0 15px var(--theme-transparent-color);
+	height: 100px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.field {
+	color: var(--theme-color);
+	font-size: 64px;
+	text-shadow: 0 0 15px var(--theme-transparent-color);
+}
+
+#roll-btn {
+	outline: none;
+	border: none;
+	margin: 50px;
+	background-color: transparent;
+	color: var(--theme-color);
+	text-shadow: 0 0 15px var(--theme-transparent-color);
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	padding: 15px 45px;
+	font-size: 1.5em;
+	border-radius: 20px;
+	box-shadow: inset 0 0 0 4px var(--theme-color), 0 0 15px var(--theme-transparent-color);
+	transition: transform 0.2s, box-shadow 0.2s;
+	user-select: none;
+}
+
+#roll-btn:hover {
+	cursor: pointer;
+	transform: translate(0, -5px);
+	box-shadow: inset 0 0 0 4px var(--theme-color), 0 5px 10px -4px var(--theme-color);
+}
