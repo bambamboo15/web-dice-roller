@@ -33,7 +33,6 @@ body {
 	text-align: center;
 	font-weight: bold;
 	font-size: 48px;
-	text-shadow: 0 0 5px var(--theme-transparent-color);
 }
 
 .header > p {
@@ -41,7 +40,6 @@ body {
 	width: 600px;
 	font-size: 24px;
 	padding-top: 5px;
-	text-shadow: 0 0 2px var(--theme-transparent-color);
 }
 
 .body {
@@ -61,18 +59,16 @@ body {
 	border: 4px solid var(--theme-color);
 	border-radius: 15px;
 	box-shadow: 0 0 15px var(--theme-transparent-color);
-	height: 100px;
+	height: 75px;
 	width: 100px;
+	padding: 0 16px;
+	font-size: 48px;
+	color: var(--theme-color);
+	text-shadow: 0 0 15px var(--theme-transparent-color);
 	display: flex;
-	justify-content: center;
+	justify-content: right; /* requirement: right justification */
 	align-items: center;
 	user-select: none;
-}
-
-.field {
-	color: var(--theme-color);
-	font-size: 64px;
-	text-shadow: 0 0 15px var(--theme-transparent-color);
 }
 
 #roll-btn {
@@ -81,8 +77,6 @@ body {
 	margin: 50px;
 	background-color: transparent;
 	color: var(--theme-color);
-	text-shadow: 0 0 15px var(--theme-transparent-color);
-	text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	padding: 15px 45px;
 	font-size: 1.5em;
 	border-radius: 20px;
