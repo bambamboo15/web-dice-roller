@@ -3,8 +3,14 @@ const rollButton = document.getElementById("roll-btn");
 const dice = document.querySelectorAll(".field");
 
 // Prevent the user from spamming the button
-// and thus overloading the server
 let rolling = false;
+
+// Asynchronously call one of the RESTful APIs and roll
+// the dice
+function onload() {
+	fetch("https://web-dice-roller-api.azurewebsites.net/roll-a-die");
+	roll();
+}
 
 // Perform normal roll operation but take the current
 // rolling state into consideration
