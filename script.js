@@ -2,10 +2,36 @@
 const rollButton = document.getElementById("roll-btn");
 const dice = document.querySelectorAll(".field");
 
-// Loop through every die and roll them by
-// generating a random integer from 1 to 6
-function roll() {
-	for (const die of dice) {
-		die.innerText = 1 + Math.floor(Math.random() * 6);
+// Prevent the user from spamming the button
+// and thus overloading the server
+let rolling = false;
+
+// Perform normal roll operation but take the current
+// rolling state into consideration
+async function roll() {
+	if (!rolling) {
+		rolling = true;
+		await actually_roll();
+		rolling = false;
+	}
+}
+
+// Generate as many dice roller values as necessary
+// using the Web Dice Roller API, then loop through
+// each die and set their value
+//
+// Both steps are not being done in the same loop
+// so all the dice can be set at the same time
+async function actually_roll() {
+	let values = [];
+	for (var i = 0; i < dice.length; ++i) {
+		const response = await fetch("https://web-dice-roller-api.azurewebsites.net/roll-a-die");
+		const json = await response.json();
+		values.push(json.value);
+	}
+	for (var i = 0; i < dice.length; ++i) {
+		const die = dice[i];
+		const value = values[i];
+		die.innerText = value;
 	}
 }
